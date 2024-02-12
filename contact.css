@@ -1,0 +1,147 @@
+
+
+#contact{
+    text-align: center;
+    font-size: larger;
+    width: 100%;
+    height: auto;
+    padding: 1vw;
+}
+.touch-div h1{
+    font-size: 4vw;
+    padding-top: 5vw;
+}
+.touch-div h2{
+    padding-top: 2vw;
+}
+.touch-div h2 span{
+    color: blue;
+}
+.touch-div h4{
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+}
+form{
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    width: 100%;
+}
+
+#contact .container{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    width: 100%;
+}
+
+.formBox{
+    position: relative;
+    width: 100%;
+}
+
+.formBox .row50{
+    display: flex;
+    gap: 20px; 
+}
+
+.inputBox{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 75%;
+}
+
+.formBox .row50 .inputBox{
+    width: 100%;
+}
+
+.inputBox label{
+    font-size: 3vh;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: -15px;
+    display: block;
+    z-index: 100;
+    width: max-content;
+    text-align: left;
+    margin-left: 4vw;
+}
+
+.inputBox input{
+    color: white;
+    padding: 10px;
+    font-size: 1.1em;
+    outline: none;
+    border: 0.75px solid #fff;
+    border-radius: 10px;
+    background-color: transparent;
+    min-height: 5vw;
+}
+
+form select{
+    color: white;
+    padding: 10px;
+    font-size: 1.1em;
+    outline: none;
+    border: 0.75px solid #fff;
+    border-radius: 10px;
+    background-color: transparent;
+    min-height: 5vw;
+    width: 70vw;
+}
+
+form textarea{
+    color: white;
+    padding: 10px;
+    font-size: 1.75em;
+    outline: none;
+    border: 0.75px solid #fff;
+    border-radius: 10px;
+    background-color: transparent;
+    min-height: 5vw;
+    width: 70vw;
+}
+
+.send{
+    text-align: right;
+    padding-right: 0;
+    margin-right: 0;
+    padding: 10px;
+    background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+    width: 12.5rem;
+    height: 3rem;
+    font-size: 3rem;
+    border: none;
+    border-radius: 5px;
+    right: 0;
+}
+
+.inputBox button{
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    right: 0;
+}
+
+svg{
+    width: 1em;
+    height: auto;
+}
+
+.star{
+    font-size: 2vw;
+}
+.line{
+    display:block;
+    width:20% ;
+    border-top: 3px solid #121118;
+}
+
+.divider{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}

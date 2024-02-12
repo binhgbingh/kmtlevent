@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/4808bac0bb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contact.css">
+    <title>KMTL EVENT</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__container">
+             <div id="navbar__logo">
+              <a href="index.html">KMTL EVENT</a>
+            </div>
+           </div>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="index.html" class="navbar__links">HOME</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="about.html" class="navbar__links">ABOUT</a>
+                </li>
+                <li class="navbar__item">
+                  <a href="kottawa.html" class="navbar__links">K-OTTAWA</a>
+                </li>
+                <li class="navbar__item"> DANCE TEAMS
+                  <ul class="dropdown">
+                    <li class="navbar__item">
+                        <a href="rewind.html" class="navbar__links">REWIND</a>
+                    </li>
+                    <li class="navbar__item">
+                      <a href="dozen.html" class="navbar__links">DO:ZEN</a>
+                    </li> 
+                    <li class="navbar__item">
+                        <a href="xsrm.html" class="navbar__links">X.SRM</a>
+                    </li>
+                    <li class="navbar__item">
+                      <a href="vixn.html" class="navbar__links">VIXN</a>
+                    </li> 
+                  </ul>
+                </li>
+                <li class="navbar__item">
+                  <a href="calendar.html" class="navbar__links">CALENDAR</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="contact.html" class="navbar__links">CONTACT</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+      <!-- Get in Touch Section  -->
+      <section id="contact">
+        <div class="contact container">
+            <div class="touch-div">
+                <h1>Wish to be Part<br>Of The Team?</h1>
+                <h2>Email: <span>k.eventmtl@gmail.com</span></h2>
+                <h4>____________________________________</h4>
+                <form action="https://formsubmit.co/hey@blossommedia.ca" method="POST">
+                   <div class="formBox">
+                        <div class="row50">
+                            <div class="inputBox">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" placeholder="Elizabeth" required>
+                            </div>
+                            <div class="inputBox">
+                                <label for="surame">Surname</label>
+                                <input type="text" id="surname" placeholder="Huynh" required>
+                            </div>
+                       </div>
+                       <div class="row50">
+                            <div class="inputBox">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" placeholder="hey@......."> 
+                            </div>
+                            <div class="inputBox">
+                                <label for="role">Role</label>
+                                <input type="text" id="role" placeholder="Founder" required>
+                            </div>
+                        </div>
+                        <div class="row50">
+                            <div class="inputBox">
+                                <label for="phone">Phone Number</label>
+                                <input type="text" id="phone" placeholder="+1" required> 
+                            </div>
+                            <div class="inputBox">
+                                <label for="website">Portfolio</label>
+                                <input type="text" id="portfolio" placeholder="In pdf" required>
+                            </div>
+                        </div>
+                        <div class="row100">
+                            <div class="inputBox">
+                                <label for="talk">Tell us more</label>
+                                <textarea id="talk" rows="5">......</textarea>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row100">
+                            <div class="inputBox send">
+                                <button type="submit">Send Inquiry</button>
+                            </div>
+                        </div>      
+                   </div>
+               </form>
+            </div>
+        </div>
+    </section>
+    <!-- End Get in Touch Section  -->
+    
+<script src="main.js"></script>
+<script>
+    let currentIndex = 0;
+
+    function changeSlide(n) {
+      currentIndex += n;
+      showSlides();
+    }
+
+    function showSlides() {
+      const slides = document.querySelector('.slideshow-container');
+      if (currentIndex < 0) {
+        currentIndex = slides.children.length - 1;
+      } else if (currentIndex >= slides.children.length) {
+        currentIndex = 0;
+      }
+      slides.style.transform = `translateX(${-currentIndex * 100}%)`;
+    }
+  </script>
+
+<footer>
+    <div class="social-media">
+      <a href="https://www.facebook.com/Kmtl.Event/" target="_blank"><i class="fa fa-facebook" style="font-size:15px;"> Facebook</i></a>
+        <a href="https://www.instagram.com/k_event.mtl/" target="_blank"><i class="fa fa-instagram" style="font-size:15px;"> Instagram</i></a>
+        <a href="https://www.youtube.com/channel/UCWiVbJKFuUOisDW_eFVti1A" target="_blank"><i class="fa fa-youtube" style="font-size:15px;"> Youtube</i></a>
+    </div>
+    <p>&copy; 2024 KMTL Event. All rights reserved.</p>
+</footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="nav.js"></script>
+</body>
+</html>

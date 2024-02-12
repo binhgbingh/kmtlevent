@@ -1,0 +1,251 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --base-color: radial-gradient(circle, #e3f0fb 0%, #fffcf1 100%);
+    --first-color: linear-gradient(#e3f0fb 0%, #fffcf1 100%);
+    --second-color: #3f7cac;
+    --home-image: url("img/homepage-pink.png")
+}
+
+body{
+    background: var(--base-color);
+    color: var(--second-color);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+@import url('https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Oxygen:wght@300;400;700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
+h1,h2,h3{
+    font-family: "Non Natural Grotesk",Sans-serif;
+    font-weight: 500;
+}
+
+p{
+    font-family: "Maison Neue MG",Sans-serif;
+    font-weight: 300;
+
+}
+a{
+    text-decoration: none;
+    color: #3f7cac;
+}
+
+#background-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+  
+.navbar{
+    background: var(--first-color);
+    color: var(--second-color);
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    border-bottom: var(--second-color) solid 2px;
+}
+
+.navbar__container{
+    justify-content: space-between;
+    display: flex;
+    height: 80px;
+    width: 100%; /* take all the space*/
+    z-index: 1;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+
+#navbar__logo{
+    color: var(--second-color);
+    display: flex;
+    align-items: center;  /* center vertically*/
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.8rem;
+    border: none;
+    height: auto;
+    padding: 0 2rem;
+    width: 100%;
+}
+
+.navbar__menu{
+    display: flex;
+    list-style-type: none;
+    text-align: center;
+    align-items: center; /* center vertically*/
+}
+
+.navbar__item{
+    height: auto;
+    width: max-content;
+}
+.navbar__links{
+    text-decoration: none; /* nullify the links*/
+    color: var(--second-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem; /*space between*/
+    height: 100%;
+    font-size: 1.2rem;
+    width: auto;
+}
+
+.navbar__links:hover{
+  color:pink;
+}
+
+.navbar__item .icon {
+  display: none;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+  .navbar__item a:not(:first-child) {display: none;}
+  .navbar__item a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .navbar__item.responsive {position: relative;}
+  .navbar__item.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navbar__item.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+
+
+
+
+
+section{
+    height: auto;
+    width: auto;
+}
+
+ul li ul {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    transition: all 0.5s ease;
+    margin-top: 1rem;
+    left: 0;
+    display: none;
+    border: 2px solid --second-color;
+  }
+  
+  ul li:hover > ul,
+  ul li ul:hover {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+  }
+  
+  ul li ul li {
+    clear: both;
+    width: 100%;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+  }
+  
+  li {
+    display: block;
+    float: left;
+    padding: 1rem;
+    position: relative;
+    text-decoration: none;
+    transition-duration: 0.5s;
+  }
+  
+
+  section{
+      margin-top: 3vw;
+      margin-bottom: 3vw;
+  }
+
+  .swipe {
+      margin-top: 2vw;
+      border: rgb(1, 100, 139) solid 2px;
+      border-radius: 10px;
+
+    background-image: linear-gradient(
+      to right,
+      #ffffff,
+      #ffffff 50%,
+      rgb(1, 100, 139) 50%
+    );
+    font-size: 2.5vw;
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 5px 5px;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  
+  .swipe:hover {
+   background-position: 0;
+  }
+  
+  .swipe:hover::before{
+    width: 100%;
+  }
+
+  footer {
+    background: linear-gradient(#e3f0fb 0%, #fffcf1 100%);
+    color: rgb(1, 100, 139);
+    text-align: center;
+    padding: 20px;
+}
+
+.social-media {
+    margin-bottom: 10px;
+}
+
+.social-media a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-media img {
+    width: 40px; /* Adjust the size of the social media icons */
+    height: 40px;
+}
+
+p {
+    margin: 0;
+}
